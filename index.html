@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>2115 班級網站</title>
+  <style>
+    :root { font-family: system-ui, -apple-system, "Noto Sans TC", "Segoe UI", Arial, sans-serif; }
+    body { margin: 0; padding: 18px; background:#f6f7fb; color:#111; }
+    .wrap { max-width: 980px; margin: 0 auto; display: grid; gap: 14px; }
+    .card { background:#fff; border-radius: 16px; padding: 16px; box-shadow: 0 10px 22px rgba(0,0,0,.08); }
+    h1 { margin: 0 0 6px; font-size: 22px; }
+    .muted { color:#666; font-size: 13px; }
+    .row { display:flex; gap:10px; flex-wrap:wrap; margin-top: 12px; }
+    a.btn {
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 10px 14px; border-radius: 12px;
+      background:#111; color:#fff; text-decoration:none; font-weight:700;
+    }
+    a.btn.outline { background:#fff; color:#111; border:1px solid #ddd; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>📚 2115 班級網站</h1>
+      <div class="muted">點下面進入工具（可再加公告/作業）</div>
+
+      <div class="row">
+        <a class="btn" href="./2115_articles.html">🧠 短文背誦（Articles）</a>
+        <a class="btn outline" href="./class_2115_voc.html">📝 背單字（Vocabulary）</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div style="font-weight:800; margin-bottom:6px;">🔔 公告（可改）</div>
+      <div class="muted">例：本週請完成 Day 1–Day 3 單字＋短文 1 篇。</div>
+    </div>
+  </div>
+</body>
+</html>

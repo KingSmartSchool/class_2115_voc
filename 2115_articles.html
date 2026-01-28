@@ -340,10 +340,14 @@ document.getElementById("next").onclick = () => {
 /* ========= ✅ 朗讀（含暫停/繼續/停止） ========= */
 let currentUtterance = null;
 
-const btnTtsFull = document.getElementById("ttsFull");
+const btnTtsFullNormal = document.getElementById("ttsFullNormal");
+const btnTtsFullSlow = document.getElementById("ttsFullSlow");
 const btnTtsPause = document.getElementById("ttsPause");
 const btnTtsResume = document.getElementById("ttsResume");
 const btnTtsStop = document.getElementById("ttsStop");
+
+const btnTtsTargetNormal = document.getElementById("ttsTargetNormal");
+const btnTtsTargetSlow = document.getElementById("ttsTargetSlow");
 
 function setTtsButtons(state){
   if(state === "idle"){
@@ -540,6 +544,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </script>
 </body>
 </html>
+
 
 
 

@@ -255,9 +255,6 @@ function resetRecInput(){
   lastFinalChunk = "";
 }
 
-try { window.speechSynthesis.cancel(); } catch(e) {}
-setTtsButtons("idle");
-
   
 /* ========= 載入文章（核心） ========= */
 function loadCurrentArticle(){
@@ -559,6 +556,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </script>
 </body>
 </html>
+
 
 
 

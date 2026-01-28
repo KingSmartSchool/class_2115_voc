@@ -387,10 +387,16 @@ function speak(text, rate = 1){
 }
 
 
-btnTtsFull.onclick = () => {
+btnTtsFullNormal.onclick = () => {
   const full = articles[selector.value].text.replace(/\n/g," ");
-  speak(full);
+  speak(full, 1);
 };
+
+btnTtsFullSlow.onclick = () => {
+  const full = articles[selector.value].text.replace(/\n/g," ");
+  speak(full, 0.75);
+};
+
 
 btnTtsPause.onclick = () => {
   try{
@@ -546,6 +552,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </script>
 </body>
 </html>
+
 
 
 

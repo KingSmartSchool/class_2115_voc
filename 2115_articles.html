@@ -366,7 +366,7 @@ function setTtsButtons(state){
 }
 setTtsButtons("idle");
 
-function speak(text){
+function speak(text, rate = 1){
   if(!("speechSynthesis" in window)){
     alert("此瀏覽器不支持朗讀。");
     return;
@@ -375,6 +375,7 @@ function speak(text){
 
   const u = new SpeechSynthesisUtterance(text);
   u.lang = "en-US";
+  u.rate = rate; // ✅ 1 = 正常，0.75/0.8 = 慢速
   currentUtterance = u;
 
   u.onstart = () => setTtsButtons("playing");
@@ -384,6 +385,7 @@ function speak(text){
   window.speechSynthesis.speak(u);
   setTimeout(()=>setTtsButtons("playing"), 150);
 }
+
 
 btnTtsFull.onclick = () => {
   const full = articles[selector.value].text.replace(/\n/g," ");
@@ -544,6 +546,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </script>
 </body>
 </html>
+
 
 
 
